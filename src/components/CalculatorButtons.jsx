@@ -5,7 +5,8 @@ export default function CalculatorButtons({
   onButtonClick,
   onClear,
   onEqual,
-  onDelete
+  onDelete,
+  onToggleSign
 }) {
   return (
     <section className="h-3/5 text-2xl flex flex-wrap justify-between items-center">
@@ -15,17 +16,19 @@ export default function CalculatorButtons({
       >
         ac
       </button>
+
+      <button
+        className="w-16 h-16 rounded-full bg-stone-400 uppercase text-stone-800"
+        onClick={onToggleSign}
+      >
+        &plusmn;
+      </button>
+
       <button
         className="w-16 h-16 rounded-full bg-stone-400 uppercase text-stone-800"
         onClick={() => onButtonClick("%")}
       >
         %
-      </button>
-      <button
-        className="w-16 h-16 rounded-full bg-stone-400 uppercase text-stone-800 flex items-center justify-center"
-        onClick={() => onDelete()}
-      >
-        <img src={btdelete} alt="delete" className="w-8"/>
       </button>
       <button
         className="w-16 h-16 rounded-full bg-amber-500 text-3xl text-stone-50"
@@ -85,7 +88,7 @@ export default function CalculatorButtons({
         +
       </button>
       <button
-        className="w-36 h-16 rounded-full bg-stone-800 uppercase text-stone-50"
+        className="w-16 h-16 rounded-full bg-stone-800 uppercase text-stone-50"
         onClick={() => onButtonClick(0)}
       >
         0
@@ -95,6 +98,12 @@ export default function CalculatorButtons({
         onClick={() => onButtonClick(".")}
       >
         .
+      </button>
+      <button
+        className="w-16 h-16 rounded-full bg-stone-800 uppercase text-stone-50 flex items-center justify-center"
+        onClick={() => onDelete()}
+      >
+        <img src={btdelete} alt="delete" className="w-8"/>
       </button>
       <button
         className="w-16 h-16 rounded-full bg-amber-500 text-3xl text-stone-50"

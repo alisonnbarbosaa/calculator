@@ -26,6 +26,17 @@ export default function Calculator() {
   }
   }
 
+  const handleToggleSign = () => {
+    if (equal) {
+      try {
+        const toggled = String(-1 * parseFloat(equal)); // Inverte o sinal
+        setEqual(toggled);
+      } catch {
+        setEqual("Erro");
+      }
+    }
+  };
+
   const handleDelete = () => {
     setEqual((prev) => prev.slice(0, -1));
   };
@@ -44,6 +55,7 @@ export default function Calculator() {
       onButtonClick={handleButtonClick}
       onEqual={handleEqual}
       onDelete={handleDelete}
+      onToggleSign={handleToggleSign}
       />
     </main>
   );

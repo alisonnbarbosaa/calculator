@@ -38,9 +38,10 @@ export default function Calculator() {
   };
 
   const handleDelete = () => {
-    setEqual((prev) => prev.slice(0, -1));
+    if (equal.length > 0) {
+      setEqual(equal.slice(0, -1));
+    } 
   };
-
 
   return (
     <main className="bg-stone-950 w-[340px] h-[680px] rounded-3xl border-stone-300 border-[6px] p-4 shadow-2xl">

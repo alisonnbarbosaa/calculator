@@ -42,7 +42,7 @@ export default function Calculator() {
     try {
       // Cálculo da expressão (avaliando a string)
       const result = eval(equal);
-      setEqual(result.toString()); // Atualiza o estado com o resultado
+      setEqual(result.toFixed(5).toString()); // Atualiza o estado com o resultado
     } catch (error) {
       console.error("Erro ao calcular a expressão:", error);
       setEqual(""); // Limpa a entrada se houver erro
@@ -76,7 +76,7 @@ export default function Calculator() {
       <section className="h-2/5 px-4 text-stone-50">
         <CalculatorHeader />
         <div className="h-5/6 flex justify-end items-end">
-          <output className="text-6xl pb-6">{equal}</output>
+          <output className="text-3xl pb-6">{equal}</output>
         </div>
       </section>
       <CalculatorButtons

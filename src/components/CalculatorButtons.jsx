@@ -6,7 +6,7 @@ export default function CalculatorButtons({
   onClear,
   onEqual,
   onDelete,
-  onToggleSign
+  onToggleSign,
 }) {
   return (
     <section className="h-3/5 text-2xl flex flex-wrap justify-between items-center">
@@ -103,7 +103,7 @@ export default function CalculatorButtons({
         className="w-16 h-16 rounded-full bg-stone-800 uppercase text-stone-50 flex items-center justify-center"
         onClick={() => onDelete()}
       >
-        <img src={btdelete} alt="delete" className="w-8"/>
+        <img src={btdelete} alt="delete" className="w-8" />
       </button>
       <button
         className="w-16 h-16 rounded-full bg-amber-500 text-3xl text-stone-50"

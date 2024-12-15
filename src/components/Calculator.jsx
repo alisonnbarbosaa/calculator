@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { evaluate } from "mathjs";
 import CalculatorButtons from "./CalculatorButtons";
 import CalculatorHeader from "./CalculatorHeader";
 
 export default function Calculator() {
   const [equal, setEqual] = useState("");
-  const operators = ["+", "-", "*", "/"];
+  const operators = ["+", "-", "*", "/", "%"];
 
-  const handleClear = () => {
-    setEqual("");
+  const validateOperators = (equation) => {
+    // Verifica se há dois ou mais operadores consecutivos
+    return !/[+\-*/]{2,}/.test(equation);
   };
 
   const handleButtonClick = (value) => {
@@ -39,23 +41,15 @@ export default function Calculator() {
     }
 
     try {
-      // Checando se a expressão contém o operador de porcentagem
-      if (equal.includes("%")) {
-        // Substitui o símbolo '%' por uma operação de divisão por 100
-        const percentageExpression = equal.replace(/%/g, "/100");
-        const result = eval(percentageExpression); // Avalia a expressão com a porcentagem ajustada
-        setEqual(result.toString()); // Atualiza o estado com o resultado
-      } else {
-        // Caso contrário, avalia a expressão normalmente
-        const result = eval(equal);
-        setEqual(result.toString()); // Atualiza o estado com o resultado
-      }
+      //realiza as operações matemáticas
+      setEqual(evaluate(equal).toString());
     } catch (error) {
       console.error("Erro ao calcular a expressão:", error);
-      setEqual(""); // Limpa a entrada se houver erro
+      setEqual("Erro"); // Limpa a entrada se houver erro
     }
   };
 
+  //Inverte sinal do número
   const handleToggleSign = () => {
     if (equal) {
       try {
@@ -73,9 +67,9 @@ export default function Calculator() {
     }
   };
 
-  const validateOperators = (equation) => {
-    // Verifica se há dois ou mais operadores consecutivos
-    return !/[+\-*/]{2,}/.test(equation);
+  //limpa toda a equação
+  const handleClear = () => {
+    setEqual("");
   };
 
   return (

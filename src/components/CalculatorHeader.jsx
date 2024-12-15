@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 export default function CalculatorHeader() {
   const [time, setTime] = useState(new Date());
 
+  //Obtém horário em tempo real
   useEffect(() => {
     const timerId = setInterval(() => {
       setTime(new Date());
@@ -16,7 +17,7 @@ export default function CalculatorHeader() {
   return (
     <header className="flex items-center justify-between h-1/6">
       <div>
-        <time datetime="" className="font-medium text-stone-50">
+        <time className="font-medium text-stone-50">
           {time.toLocaleTimeString()}
         </time>
       </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import btdelete from "../assets/image/delete.png";
 
 export default function CalculatorButtons({
@@ -40,7 +39,7 @@ export default function CalculatorButtons({
       {[7, 8, 9].map((num) => (
         <button
           key={num}
-          className="w-16 h-16 rounded-full text-stone-50 bg-gradient-to-tl from-stone-900 to-stone-600" 
+          className="w-16 h-16 rounded-full text-stone-50 bg-gradient-to-tl from-stone-900 to-stone-600"
           onClick={() => onButtonClick(num)}
         >
           {num}
@@ -113,7 +112,7 @@ export default function CalculatorButtons({
       </button>
 
       <div className="w-full flex items-center justify-center pt-4">
-        <div className="w-1/2 h-[4px] bg-stone-50 rounded-md"></div>
+        <div className="w-1/2 h-[4px] bg-stone-200 rounded-md"></div>
       </div>
     </section>
   );

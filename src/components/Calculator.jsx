@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import CalculatorButtons from "./CalculatorButtons";
 import CalculatorHeader from "./CalculatorHeader";
@@ -40,9 +39,17 @@ export default function Calculator() {
     }
 
     try {
-      // Cálculo da expressão (avaliando a string)
-      const result = eval(equal);
-      setEqual(result.toString()); // Atualiza o estado com o resultado
+      // Checando se a expressão contém o operador de porcentagem
+      if (equal.includes("%")) {
+        // Substitui o símbolo '%' por uma operação de divisão por 100
+        const percentageExpression = equal.replace(/%/g, "/100");
+        const result = eval(percentageExpression); // Avalia a expressão com a porcentagem ajustada
+        setEqual(result.toString()); // Atualiza o estado com o resultado
+      } else {
+        // Caso contrário, avalia a expressão normalmente
+        const result = eval(equal);
+        setEqual(result.toString()); // Atualiza o estado com o resultado
+      }
     } catch (error) {
       console.error("Erro ao calcular a expressão:", error);
       setEqual(""); // Limpa a entrada se houver erro
@@ -76,7 +83,9 @@ export default function Calculator() {
       <section className="h-2/5 px-4 text-stone-50">
         <CalculatorHeader />
         <div className="h-5/6 flex justify-end items-end">
-          <output className="text-4xl pb-6 overflow-x-scroll hide-scrollbar">{equal}</output>
+          <output className="text-4xl pb-6 overflow-x-scroll hide-scrollbar">
+            {equal}
+          </output>
         </div>
       </section>
       <CalculatorButtons

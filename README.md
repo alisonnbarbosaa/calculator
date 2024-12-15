@@ -1,8 +1,27 @@
-# React + Vite
+# Calculadora Interativa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma calculadora interativa e responsiva desenvolvida com React e Tailwind CSS, proporcionando cálculos rápidos e precisos.
 
-Currently, two official plugins are available:
+## Demonstração
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Interface da Calculadora](./public/screenshot.png)  
+
+## Acesse o Site
+
+🌐 [Link para o site](https://alisonnbarbosaa.github.io/calculator/)  
+
+## Funcionalidades
+
+- **Operações Básicas**: Adição, subtração, multiplicação e divisão.
+- **Interface Responsiva**: Adaptável a diferentes tamanhos de tela.
+- **Design Moderno**: Estilizada com Tailwind CSS para uma aparência limpa e moderna.
+
+## Tecnologias Utilizadas
+
+- [React](https://reactjs.org/): Biblioteca JavaScript para construção de interfaces de usuário.
+- [Tailwind CSS](https://tailwindcss.com/): Framework CSS utilitário para estilização rápida.
+- [Vite](https://vitejs.dev/): Ferramenta de build rápida para projetos front-end.
+
+## Autor 
+
+[alison Barbosa](https://github.com/alisonnbarbosaa)

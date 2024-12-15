@@ -56,7 +56,7 @@ export default function Calculator() {
         const toggled = String(-1 * parseFloat(equal)); // Inverte o sinal
         setEqual(toggled);
       } catch {
-        setEqual("Erro");
+        setEqual("");
       }
     }
   };

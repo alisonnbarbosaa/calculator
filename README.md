@@ -4,11 +4,11 @@ Uma calculadora interativa e responsiva desenvolvida com React e Tailwind CSS, p
 
 ## Demonstração
 
-![Interface da Calculadora](./public/screenshot.png)  
+![Interface da Calculadora](./public/screenshot.png)
 
 ## Acesse o Site
 
-🌐 [Link para o site](https://alisonnbarbosaa.github.io/calculator/)  
+🌐 [Link para o site](https://alisonnbarbosaa.github.io/calculator/)
 
 ## Funcionalidades
 
@@ -22,6 +22,6 @@ Uma calculadora interativa e responsiva desenvolvida com React e Tailwind CSS, p
 - [Tailwind CSS](https://tailwindcss.com/): Framework CSS utilitário para estilização rápida.
 - [Vite](https://vitejs.dev/): Ferramenta de build rápida para projetos front-end.
 
-## Autor 
+## Autor
 
 [alison Barbosa](https://github.com/alisonnbarbosaa)

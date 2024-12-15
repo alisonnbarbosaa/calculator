@@ -72,7 +72,7 @@ export default function Calculator() {
   };
 
   return (
-    <main className="bg-stone-950 w-[340px] h-[680px] rounded-3xl border-stone-300 border-[6px] p-4 shadow-2xl">
+    <main className="bg-gradient-to-t from-stone-900 to-stone-950 w-[340px] h-[680px] rounded-3xl border-stone-300 border-[6px] p-4 shadow-2xl">
       <section className="h-2/5 px-4 text-stone-50">
         <CalculatorHeader />
         <div className="h-5/6 flex justify-end items-end">

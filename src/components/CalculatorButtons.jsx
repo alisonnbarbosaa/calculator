@@ -11,27 +11,27 @@ export default function CalculatorButtons({
   return (
     <section className="h-3/5 text-2xl flex flex-wrap justify-between items-center">
       <button
-        className="w-16 h-16 rounded-full bg-stone-400 uppercase text-stone-800"
+        className="w-16 h-16 rounded-full uppercase text-stone-800 bg-gradient-to-tl from-stone-500 to-stone-300"
         onClick={onClear}
       >
         ac
       </button>
 
       <button
-        className="w-16 h-16 rounded-full bg-stone-400 uppercase text-stone-800"
+        className="w-16 h-16 rounded-full uppercase text-stone-800 bg-gradient-to-tl from-stone-500 to-stone-300"
         onClick={onToggleSign}
       >
         &plusmn;
       </button>
 
       <button
-        className="w-16 h-16 rounded-full bg-stone-400 uppercase text-stone-800"
+        className="w-16 h-16 rounded-full uppercase text-stone-800 bg-gradient-to-tl from-stone-500 to-stone-300"
         onClick={() => onButtonClick("%")}
       >
         %
       </button>
       <button
-        className="w-16 h-16 rounded-full bg-amber-500 text-3xl text-stone-50"
+        className="w-16 h-16 rounded-full text-3xl text-stone-50 bg-gradient-to-tl from-amber-700 to-amber-400"
         onClick={() => onButtonClick("/")}
       >
         &divide;
@@ -40,7 +40,7 @@ export default function CalculatorButtons({
       {[7, 8, 9].map((num) => (
         <button
           key={num}
-          className="w-16 h-16 rounded-full bg-stone-800 uppercase text-stone-50"
+          className="w-16 h-16 rounded-full text-stone-50 bg-gradient-to-tl from-stone-900 to-stone-600" 
           onClick={() => onButtonClick(num)}
         >
           {num}
@@ -48,7 +48,7 @@ export default function CalculatorButtons({
       ))}
 
       <button
-        className="w-16 h-16 rounded-full bg-amber-500 text-3xl text-stone-50"
+        className="w-16 h-16 rounded-full text-3xl text-stone-50 bg-gradient-to-tl from-amber-700 to-amber-400"
         onClick={() => onButtonClick("*")}
       >
         x
@@ -57,7 +57,7 @@ export default function CalculatorButtons({
       {[4, 5, 6].map((num) => (
         <button
           key={num}
-          className="w-16 h-16 rounded-full bg-stone-800 uppercase text-stone-50"
+          className="w-16 h-16 rounded-full uppercase text-stone-50 bg-gradient-to-tl from-stone-900 to-stone-600"
           onClick={() => onButtonClick(num)}
         >
           {num}
@@ -65,7 +65,7 @@ export default function CalculatorButtons({
       ))}
 
       <button
-        className="w-16 h-16 rounded-full bg-amber-500 text-3xl text-stone-50"
+        className="w-16 h-16 rounded-full text-3xl text-stone-50 bg-gradient-to-tl from-amber-700 to-amber-400"
         onClick={() => onButtonClick("-")}
       >
         -
@@ -74,7 +74,7 @@ export default function CalculatorButtons({
       {[1, 2, 3].map((num) => (
         <button
           key={num}
-          className="w-16 h-16 rounded-full bg-stone-800 uppercase text-stone-50"
+          className="w-16 h-16 rounded-full uppercase text-stone-50 bg-gradient-to-tl from-stone-900 to-stone-600"
           onClick={() => onButtonClick(num)}
         >
           {num}
@@ -82,31 +82,31 @@ export default function CalculatorButtons({
       ))}
 
       <button
-        className="w-16 h-16 rounded-full bg-amber-500 text-3xl text-stone-50"
+        className="w-16 h-16 rounded-full text-3xl text-stone-50 bg-gradient-to-tl from-amber-700 to-amber-400"
         onClick={() => onButtonClick("+")}
       >
         +
       </button>
       <button
-        className="w-16 h-16 rounded-full bg-stone-800 uppercase text-stone-50"
+        className="w-16 h-16 rounded-full bg-gradient-to-tl from-stone-900 to-stone-600 uppercase text-stone-50"
         onClick={() => onButtonClick(0)}
       >
         0
       </button>
       <button
-        className="w-16 h-16 rounded-full bg-stone-800 uppercase text-stone-50"
+        className="w-16 h-16 rounded-full bg-gradient-to-tl from-stone-900 to-stone-600 uppercase text-stone-50"
         onClick={() => onButtonClick(".")}
       >
         .
       </button>
       <button
-        className="w-16 h-16 rounded-full bg-stone-800 uppercase text-stone-50 flex items-center justify-center"
+        className="w-16 h-16 rounded-full bg-gradient-to-tl from-stone-900 to-stone-600 uppercase text-stone-50 flex items-center justify-center"
         onClick={() => onDelete()}
       >
         <img src={btdelete} alt="delete" className="w-8" />
       </button>
       <button
-        className="w-16 h-16 rounded-full bg-amber-500 text-3xl text-stone-50"
+        className="w-16 h-16 rounded-full text-3xl text-stone-50 bg-gradient-to-tl from-amber-700 to-amber-400"
         onClick={() => onEqual()}
       >
         =

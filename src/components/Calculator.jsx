@@ -45,7 +45,7 @@ export default function Calculator() {
       setEqual(evaluate(equal).toString());
     } catch (error) {
       console.error("Erro ao calcular a expressão:", error);
-      setEqual("Erro"); // Limpa a entrada se houver erro
+      setEqual(""); // Limpa a entrada se houver erro
     }
   };
 
